@@ -1,3 +1,3 @@
-# bytecode-runner
+# m3ga-wallet
 
-run ya bytecode, get ya paper
+this wallet is like a normal wallet but more mega in most ways
