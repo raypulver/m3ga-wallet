@@ -1,0 +1,31 @@
+{
+  "name": "m3ga-wallet",
+  "version": "0.1.0",
+  "description": "the mega wallet of our time",
+  "main": "index.js",
+  "scripts": {
+    "test": "node run-tests",
+    "build": "node compile"
+  },
+  "author": "Raymond Pulver IV",
+  "license": "MIT",
+  "dependencies": {
+    "fs-extra": "^7.0.1",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.3",
+    "solc": "^0.5.7",
+    "solidity-parser": "^0.4.0"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "ethereumjs-testrpc": "^6.0.3",
+    "ethereumjs-tx": "^1.3.7",
+    "ethereumjs-util": "^6.1.0",
+    "ethereumjs-wallet": "^0.6.3",
+    "ganache-cli": "^6.4.1",
+    "kool-makerpccall": "git+https://bitbucket.org/raypulver/kool-makerpccall.git",
+    "mocha": "^6.0.2",
+    "request": "^2.88.0",
+    "web3-utils": "^1.0.0-beta.51"
+  }
+}
