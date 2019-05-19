@@ -22,7 +22,7 @@ contract BytecodeRunner {
         }
         case 0xf2 {
           // callcode handler -- no need to callcode, don't want to circumvent sstore
-          mstore(add(start, i), 0xf2)
+          mstore(add(start, i), 0xfd)
         }
         case 0xf4 {
           // delegatecall handler -- we don't need to delegate in a temporary contract, can only be used to circumvent sstore
