@@ -20,6 +20,14 @@ contract BytecodeRunner {
           // sstore handler -- no need to sstore, just revert
           mstore8(add(start, i), 0xfd)
         }
+        case 0xf2 {
+          // callcode handler -- no need to callcode, don't want to circumvent sstore
+          mstore(add(start, i), 0xf2)
+        }
+        case 0xf4 {
+          // delegatecall handler -- we don't need to delegate in a temporary contract, can only be used to circumvent sstore
+          mstore(add(start, i), 0xfd)
+        }
         default {
           let isPush := and(lt(op, 0x80), gt(op, 0x5f))
           if eq(isPush, 1) {
